@@ -239,7 +239,7 @@ let statesArray =[
 
   let  currentStatesArray = []
 statesArray.forEach(e=>{
-  let tmp = e.name +" (" + e.abbreviation.toUpperCase()+")"
+  let tmp = e.name
   currentStatesArray.push(tmp)
 })
 

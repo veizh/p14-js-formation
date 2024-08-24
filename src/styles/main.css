@@ -109,6 +109,34 @@ footer {
 .backdrop .react-datepicker-popper {
   z-index: 81;
 }
+.backdrop .text {
+  color: #1e1e1e;
+  font-size: 22px;
+}
+.backdrop .content {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  border-radius: 5px;
+  padding: 10px 10px 10px 20px;
+  background-color: whitesmoke;
+}
+.backdrop .validBtn {
+  background-color: #1e1e1e;
+  display: flex;
+  border-radius: 5px;
+  gap: 5px;
+  align-items: center;
+  padding: 3px 6px;
+  cursor: pointer;
+}
+.backdrop .validBtn:hover {
+  background-color: #363636;
+}
+.backdrop .validBtn p {
+  font-size: 15px;
+  color: white;
+}
 .backdrop .modal__content {
   padding: 60px 20px 20px 20px;
   position: relative;

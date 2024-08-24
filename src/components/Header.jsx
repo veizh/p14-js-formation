@@ -1,5 +1,4 @@
-import { Home, PlusCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { PlusCircle } from 'lucide-react';
 let Header = ({addEmploye,setAddEmployee})=>{
     return(
         <header>

@@ -1,19 +1,29 @@
 import { useEffect, useMemo, useState } from 'react';
+import { useStore } from "react-redux";
 import {
   MaterialReactTable,
   useMaterialReactTable,
 } from 'material-react-table';
 const Table = ({fetchData})=>{
+  const store = useStore();
     const [data,setData]=useState(false)
+    const [list, setList] = useState(store.getState().list);
+     useEffect(() => {
+       store.subscribe(() => {
+         setList(store.getState().list);
+       });
+       console.log(list);
+       
+     }, [store]);
     let table = []
     useEffect(()=>{
-        if(localStorage.getItem('users')){
-            let userSorted = JSON.parse(localStorage.getItem('users'))
+        if(list.length!==0){
+            let userSorted = list
             setData(userSorted)
         }
         
       
-    },[fetchData])
+    },[list])
    
     const columns = useMemo(
         () => [{
